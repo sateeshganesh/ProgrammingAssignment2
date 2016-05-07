@@ -26,10 +26,7 @@ cacheSolve <- function(x, ...) {
     invMat <- x$getInvMat()
     if(!is.null(invMat)) {
         message("Getting cached Matrix data")
-        #if(solve(invMat) %*% invMat) == I {
-            return(invMat)
-        #}
-        
+        return(invMat)
     }
     invMatdata <- x$getM()
     invMat <- solve(invMatdata, ...)
